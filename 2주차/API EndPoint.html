@@ -1,0 +1,706 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>제목 없음</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="29c59932-8e77-8073-bc85-fbeca840709f" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><table class="collection-content"><thead><tr><th><span class="icon property-icon"><img src="https://www.notion.so/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Category</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Select</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/font_gray.svg" style="width:14px;height:14px;display:block"/></span>기능</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>HTTP Method</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>API Path</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Token</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>담당자</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Front</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Back</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>우선순위</th></tr></thead><tbody><tr id="29c59932-8e77-808a-8513-fefda6d8f79a"><td class="cell-a:{O"></td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77808a8513fefda6d8f79a?pvs=21">제목 없음</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"><span class="selected-value select-value-color-gray">개발 전</span></td><td class="cell-OYFD"><span class="selected-value select-value-color-gray">개발 전</span></td><td class="cell-Q`=^"><span class="selected-value select-value-color-gray">3순위</span></td></tr><tr id="29c59932-8e77-80d8-b860-e2869074800a"><td class="cell-a:{O">메인 페이지</td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780d8b860e2869074800a?pvs=21">메인 페이지 조회</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D">/coco</td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-809c-8b6c-f8b59a28440f"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77809c8b6cf8b59a28440f?pvs=21">메인 배너</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-801f-862e-c4271d10f990"><td class="cell-a:{O"></td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77801f862ec4271d10f990?pvs=21">상품 노출</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80aa-b2e1-fe4cd3ca612c"><td class="cell-a:{O"></td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780aab2e1fe4cd3ca612c?pvs=21">제목 없음</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80d0-b05b-c9b3b19a2dfe"><td class="cell-a:{O"></td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780d0b05bc9b3b19a2dfe?pvs=21">제목 없음</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80dc-a5a1-d65d478efae7"><td class="cell-a:{O"></td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780dca5a1d65d478efae7?pvs=21">제목 없음</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-806c-856d-f7be0a754245"><td class="cell-a:{O">회원</td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77806c856df7be0a754245?pvs=21">회원가입 페이지</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80f1-9246-c6f4293837e7"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780f19246c6f4293837e7?pvs=21">회원가입 폼</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/coco/auth/signup/form</td><td class="cell-`_?v"><span class="selected-value select-value-color-red">X</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-red">추현민</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80dd-814a-fc88673d4b8a"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780dd814afc88673d4b8a?pvs=21">약관동의</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/coco/terms/latest</td><td class="cell-`_?v"><span class="selected-value select-value-color-red">X</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-red">추현민</span></td><td class="cell-USYn"><span class="selected-value select-value-color-gray">개발 전</span></td><td class="cell-OYFD"><span class="selected-value select-value-color-gray">개발 전</span></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-809c-80d9-e81a88fb21db"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77809c80d9e81a88fb21db?pvs=21">약관동의 기록</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D">/coco/auth/terms/agree</td><td class="cell-`_?v"><span class="selected-value select-value-color-red">X</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-red">추현민</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8009-868b-f82a5c90aa29"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778009868bf82a5c90aa29?pvs=21">아이디 중복 체크</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/coco/auth/check-id?memId=user123</td><td class="cell-`_?v"><span class="selected-value select-value-color-red">X</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-red">추현민</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80dd-9446-f816b5c6b902"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780dd9446f816b5c6b902?pvs=21">닉네임 중복 체크</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/coco/auth/check-nickname?nickName=user</td><td class="cell-`_?v"><span class="selected-value select-value-color-red">X</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-red">추현민</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80e7-98fe-c0f963499536"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780e798fec0f963499536?pvs=21">본인인증 발송</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D">/coco/auth/verify/request</td><td class="cell-`_?v"><span class="selected-value select-value-color-red">X</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-red">추현민</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8044-b254-d39b08072f1c"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778044b254d39b08072f1c?pvs=21">본인인증 확인</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D">/coco/auth/verify/confirm</td><td class="cell-`_?v"><span class="selected-value select-value-color-red">X</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-red">추현민</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8028-927d-e8b7795227da"><td class="cell-a:{O"></td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778028927de8b7795227da?pvs=21">소셜 로그인 연동</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"><span class="selected-value select-value-color-yellow">2순위</span></td></tr><tr id="29c59932-8e77-8045-a288-fe45cab1d887"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778045a288fe45cab1d887?pvs=21">회원가입 처리</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D">/coco/auth/signup/confirm</td><td class="cell-`_?v"><span class="selected-value select-value-color-red">X</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-red">추현민</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8054-8105-ddc6d17d3d0b"><td class="cell-a:{O"></td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780548105ddc6d17d3d0b?pvs=21">제목 없음</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80b4-ba9f-e8e21b57b87f"><td class="cell-a:{O"></td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780b4ba9fe8e21b57b87f?pvs=21">로그인 페이지</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8078-8f0b-f7dba089a3e8"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780788f0bf7dba089a3e8?pvs=21">로그인 폼</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/coco/auth/login/form</td><td class="cell-`_?v"><span class="selected-value select-value-color-red">X</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-red">추현민</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8081-8465-c15e78fb454f"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780818465c15e78fb454f?pvs=21">사용자 인증</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D">/coco/auth/login</td><td class="cell-`_?v"><span class="selected-value select-value-color-red">X</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-red">추현민</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8005-9664-faf93749b63d"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780059664faf93749b63d?pvs=21">로그아웃</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D">/coco/auth/logout</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-red">추현민</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80e9-b65e-fe5142c6d39f"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780e9b65efe5142c6d39f?pvs=21">아이디/비밀번호 찾기 폼</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/coco/auth/find-id/form</td><td class="cell-`_?v"><span class="selected-value select-value-color-red">X</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-red">추현민</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80b8-9815-f95b8cd431b7"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780b89815f95b8cd431b7?pvs=21">아이디/비밀번호 찾기 요청</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D">/coco/auth/find-id/request</td><td class="cell-`_?v"><span class="selected-value select-value-color-red">X</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-red">추현민</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80d1-a31e-cf0bced2b15e"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780d1a31ecf0bced2b15e?pvs=21">아이디/비밀번호 찾기 완료</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D">/coco/auth/find-id/confirm</td><td class="cell-`_?v"><span class="selected-value select-value-color-red">X</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-red">추현민</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-800f-91ae-d4a364bbc997"><td class="cell-a:{O"></td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77800f91aed4a364bbc997?pvs=21">제목 없음</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80a6-bc23-c6f21a244e84"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780a6bc23c6f21a244e84?pvs=21">마이페이지 </a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/coco/mypage</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-800b-9ad8-d9f78233397a"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77800b9ad8d9f78233397a?pvs=21">프로필 수정 페이지</a></td><td class="cell-miT\"><span class="selected-value select-value-color-green">PATCH</span></td><td class="cell-&gt;x|D">/coco/mypage/profile</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8010-960d-c0da5704734e"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778010960dc0da5704734e?pvs=21">프로필 수정 처리</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8099-9f1b-f5f65cf62139"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780999f1bf5f65cf62139?pvs=21">리뷰 목록 , 좋아요 목록 조회 페이지</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/coco/mypage/reviewlist</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8046-8633-f0e38ac05b65"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780468633f0e38ac05b65?pvs=21">회원 탈퇴 페이지</a></td><td class="cell-miT\"><span class="selected-value select-value-color-gray">DELETE</span></td><td class="cell-&gt;x|D">/coco/mypage/account</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80a4-8854-f749230290d1"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780a48854f749230290d1?pvs=21">회원 탈퇴 처리</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80e2-83ee-c7963c6917ab"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/Co-mate-29c599328e7780e283eec7963c6917ab?pvs=21">Co-mate 페이지</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/coco/mypage/comate</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-orange">이규리</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8016-a2b0-fe86095f05ae"><td class="cell-a:{O"></td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778016a2b0fe86095f05ae?pvs=21">제목 없음</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-807c-ad34-e5953beb8390"><td class="cell-a:{O"></td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77807cad34e5953beb8390?pvs=21">제목 없음</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8090-a922-df679788284b"><td class="cell-a:{O"></td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778090a922df679788284b?pvs=21">제목 없음</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80a1-a34e-fbbaf77e7c14"><td class="cell-a:{O">장바구니</td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780a1a34efbbaf77e7c14?pvs=21">장바구니 페이지</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/coco/members/cart/cartform</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-blue">이준범</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8088-9913-db255e7944ad"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780889913db255e7944ad?pvs=21">장바구니 상품 추가</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D">/coco/members/cart</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-blue">이준범</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8073-864f-c7dcd15594dd"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778073864fc7dcd15594dd?pvs=21">장바구니 조회(총액,유효성)</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/coco/members/cart</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-blue">이준범</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8039-a65b-f37cd8e4bf81"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778039a65bf37cd8e4bf81?pvs=21">장바구니 상품 수정</a></td><td class="cell-miT\"><span class="selected-value select-value-color-green">PATCH</span></td><td class="cell-&gt;x|D">/coco/members/cart/items</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-blue">이준범</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-803e-8500-c8ce79276c3f"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77803e8500c8ce79276c3f?pvs=21">장바구니 상품 삭제</a></td><td class="cell-miT\"><span class="selected-value select-value-color-gray">DELETE</span></td><td class="cell-&gt;x|D">/coco/members/cart/items</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-blue">이준범</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-808a-976b-cc93a5e87de6"><td class="cell-a:{O"></td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77808a976bcc93a5e87de6?pvs=21">제목 없음</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-801e-b95e-e09949dc38e3"><td class="cell-a:{O"></td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77801eb95ee09949dc38e3?pvs=21">제목 없음</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-807a-bbb9-dbb90f79d1fe"><td class="cell-a:{O">상품</td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77807abbb9dbb90f79d1fe?pvs=21">상품 페이지</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8085-be83-e918675cdee2"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778085be83e918675cdee2?pvs=21">상품 페이지 폼</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/coco/products</td><td class="cell-`_?v"><span class="selected-value select-value-color-red">X</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-pink">최승훈</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"><span class="selected-value select-value-color-red">1순위</span></td></tr><tr id="29c59932-8e77-80c0-a262-dfdcf4649f1e"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780c0a262dfdcf4649f1e?pvs=21">상품 상세 폼</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/coco/products/{productId}</td><td class="cell-`_?v"><span class="selected-value select-value-color-red">X</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-pink">최승훈</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"><span class="selected-value select-value-color-red">1순위</span></td></tr><tr id="29c59932-8e77-80d2-a2d4-f7a8e5f997ac"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780d2a2d4f7a8e5f997ac?pvs=21">상품 검색 폼</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/coco/products/search</td><td class="cell-`_?v"><span class="selected-value select-value-color-red">X</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-pink">최승훈</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"><span class="selected-value select-value-color-red">1순위</span></td></tr><tr id="29c59932-8e77-80b1-97fa-ce63eae08d65"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780b197face63eae08d65?pvs=21">상품 검색 내용</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D">/coco/products/search?q={keyword}</td><td class="cell-`_?v"><span class="selected-value select-value-color-red">X</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-pink">최승훈</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"><span class="selected-value select-value-color-red">1순위</span></td></tr><tr id="29c59932-8e77-80c6-9c92-cb240ab527ec"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/AI-29c599328e7780c69c92cb240ab527ec?pvs=21">AI 이미지 검색 폼</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/coco/products/search-by-image</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-pink">최승훈</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"><span class="selected-value select-value-color-gray">3순위</span></td></tr><tr id="29c59932-8e77-808e-a932-ff3e45f4a6dc"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/AI-29c599328e77808ea932ff3e45f4a6dc?pvs=21">AI 이미지 검색 내용</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D">/coco/products/search-by-image/search?q={img}</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-pink">최승훈</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"><span class="selected-value select-value-color-gray">3순위</span></td></tr><tr id="29c59932-8e77-8032-bea6-c7cfbc056ee7"><td class="cell-a:{O"></td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778032bea6c7cfbc056ee7?pvs=21">제목 없음</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-800c-9701-f2a6e9905ee5"><td class="cell-a:{O"></td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77800c9701f2a6e9905ee5?pvs=21">제목 없음</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80ec-94fb-cb061769e437"><td class="cell-a:{O">리뷰</td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780ec94fbcb061769e437?pvs=21">리뷰 페이지</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"><br/></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-800e-8154-e83411dbf300"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77800e8154e83411dbf300?pvs=21">리뷰 작성 폼</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/coco/product/{productId}/reviews <br/></td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-default">신태엽</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80ec-ac0e-f51a538e8eaa"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780ecac0ef51a538e8eaa?pvs=21">리뷰 등록</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D">/coco/product/{productId}/reviews</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-default">신태엽</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8074-a000-d5e521f0787b"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778074a000d5e521f0787b?pvs=21">리뷰 수정 폼</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/coco/product/{productId}/reviews/{reviewId}/edit<br/></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8000-b5d5-f2485e1fd6d8"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778000b5d5f2485e1fd6d8?pvs=21">리뷰 수정</a></td><td class="cell-miT\"><span class="selected-value select-value-color-green">PATCH</span></td><td class="cell-&gt;x|D">/coco/product/{productId}/reviews/{reviewId}<br/></td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-default">신태엽</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-801c-96da-da6b550cf8e9"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77801c96dada6b550cf8e9?pvs=21">리뷰 삭제</a></td><td class="cell-miT\"><span class="selected-value select-value-color-gray">DELETE</span></td><td class="cell-&gt;x|D">/coco/product/{productId}/reviews/{reviewId}<br/></td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-default">신태엽</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-801b-bf6d-f94ce4b1a593"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77801bbf6df94ce4b1a593?pvs=21">상세 리뷰 폼</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">coco/product/{productId}/reviews/{reviewId}<br/></td><td class="cell-`_?v"><span class="selected-value select-value-color-red">X</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-default">신태엽</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80f0-b5d3-fb1d30fd9243"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780f0b5d3fb1d30fd9243?pvs=21">리뷰 상세 정보</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/coco/product/{productId}/reviews/{reviewId}<br/></td><td class="cell-`_?v"><span class="selected-value select-value-color-red">X</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-default">신태엽</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8081-a9b0-dec90d6d83a6"><td class="cell-a:{O"></td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778081a9b0dec90d6d83a6?pvs=21">제목 없음</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80cd-bc0c-cd54096106a1"><td class="cell-a:{O">주문</td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780cdbc0ccd54096106a1?pvs=21">주문 페이지</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/orders/form</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-yellow">임응규</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80a4-bc4a-ccd1f65cb562"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780a4bc4accd1f65cb562?pvs=21">주문 정보 조회</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D">/orders</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-yellow">임응규</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80ad-8d2a-d647b6f3a572"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780ad8d2ad647b6f3a572?pvs=21">주문 정보 수정 폼</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8071-b380-fe56571885f5"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778071b380fe56571885f5?pvs=21">주문 정보 수정</a></td><td class="cell-miT\"><span class="selected-value select-value-color-green">PATCH</span></td><td class="cell-&gt;x|D">/orders/</td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-808e-9e9c-eb723470797a"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77808e9e9ceb723470797a?pvs=21">주문 완료 페이지</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/orders/complete</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-yellow">임응규</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8071-85ce-d8cd4a1cc83d"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77807185ced8cd4a1cc83d?pvs=21">주문 완료 처리</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8008-a27f-c33aa511c019"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778008a27fc33aa511c019?pvs=21">주문 실패 페이지</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/orders/fail</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-yellow">임응규</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80d7-b834-e96430f48bc3"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780d7b834e96430f48bc3?pvs=21">주문 실패 처리</a></td><td class="cell-miT\"><span class="selected-value select-value-color-green">PATCH</span></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8011-b87f-eb3be5f307b4"><td class="cell-a:{O"></td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778011b87feb3be5f307b4?pvs=21">제목 없음</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80ec-a5ba-ed2ccc125023"><td class="cell-a:{O">결제</td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780eca5baed2ccc125023?pvs=21">결제 페이지</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/coco/payments</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-808a-a287-e8d86f875931"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77808aa287e8d86f875931?pvs=21">결제 완료페이지</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D">/coco/payments/complete</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80d2-b4fe-f138617bba2e"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780d2b4fef138617bba2e?pvs=21">결제 실패 페이지 </a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D">/coco/payments/fail</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80a4-b6ed-ee3be4066521"><td class="cell-a:{O"></td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780a4b6edee3be4066521?pvs=21">제목 없음</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8078-bbc1-ecef1f4e0fd7"><td class="cell-a:{O"></td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778078bbc1ecef1f4e0fd7?pvs=21">제목 없음</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D"></td><td class="cell-`_?v"></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80e2-89a6-df9f330725f8"><td class="cell-a:{O">관리자</td><td class="cell-T\WK"></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780e289a6df9f330725f8?pvs=21">관리자 페이지</a></td><td class="cell-miT\"></td><td class="cell-&gt;x|D">/admin</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"><span class="selected-value select-value-color-red">1순위</span></td></tr><tr id="29c59932-8e77-8084-8e7a-de856be223b0"><td class="cell-a:{O">상품 관리</td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780848e7ade856be223b0?pvs=21">상품 목록 페이지</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/admin/products</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-pink">최승훈</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"><span class="selected-value select-value-color-red">1순위</span></td></tr><tr id="29c59932-8e77-80e2-9247-c1246ae9c160"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780e29247c1246ae9c160?pvs=21">(특정 상품 상세)</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/admin/products/{productId}</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-pink">최승훈</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"><span class="selected-value select-value-color-red">1순위</span></td></tr><tr id="29c59932-8e77-8098-8b78-cb413b68ee25"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780988b78cb413b68ee25?pvs=21">상품 등록</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D">/admin/products</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-pink">최승훈</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"><span class="selected-value select-value-color-red">1순위</span></td></tr><tr id="29c59932-8e77-80ab-978a-f4e1be77d970"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780ab978af4e1be77d970?pvs=21">상품 수정</a></td><td class="cell-miT\"><span class="selected-value select-value-color-default">PUT</span></td><td class="cell-&gt;x|D">/admin/products/{productId}</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-pink">최승훈</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"><span class="selected-value select-value-color-red">1순위</span></td></tr><tr id="29c59932-8e77-8066-a830-ecc3bc03d692"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778066a830ecc3bc03d692?pvs=21">상품 삭제</a></td><td class="cell-miT\"><span class="selected-value select-value-color-gray">DELETE</span></td><td class="cell-&gt;x|D">/admin/products/{productId}</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"><span class="selected-value select-value-color-pink">최승훈</span></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8068-abf1-e4f913446515"><td class="cell-a:{O">카테고리 관리</td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778068abf1e4f913446515?pvs=21">카테고리 관리 페이지</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/admin/categories</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-805c-955d-fbf3e1333a03"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77805c955dfbf3e1333a03?pvs=21">새 카테고리 등록</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D">/admin/categories</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-808c-bb81-f2392f14f221"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77808cbb81f2392f14f221?pvs=21">카테고리 수정</a></td><td class="cell-miT\"><span class="selected-value select-value-color-default">PUT</span></td><td class="cell-&gt;x|D">/admin/categories/{categoryId}</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-800a-a3e5-cf5930bcddd4"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77800aa3e5cf5930bcddd4?pvs=21">카테고리 삭제</a></td><td class="cell-miT\"><span class="selected-value select-value-color-gray">DELETE</span></td><td class="cell-&gt;x|D">/admin/categories/{categoryId}</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-803c-ae78-cfd30757a5cc"><td class="cell-a:{O">회원 관리</td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77803cae78cfd30757a5cc?pvs=21">회원 목록 페이지</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/admin/users</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8007-ab2b-cdf7675dbae3"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e778007ab2bcdf7675dbae3?pvs=21">특정 회원 상세</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/admin/users/{userId}</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-803b-aed0-e1563e43221d"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77803baed0e1563e43221d?pvs=21">회원 강제 탈퇴/삭제</a></td><td class="cell-miT\"><span class="selected-value select-value-color-gray">DELETE</span></td><td class="cell-&gt;x|D">/admin/users/{userId}</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80c7-b8cf-d43d84ea4c97"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780c7b8cfd43d84ea4c97?pvs=21">회원 정보 수정 (권한 등)</a></td><td class="cell-miT\"><span class="selected-value select-value-color-default">PUT</span></td><td class="cell-&gt;x|D">/admin/users/{userId}</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80bc-8938-d53d6c469aa8"><td class="cell-a:{O">주문 관리</td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780bc8938d53d6c469aa8?pvs=21">전체 주문 목록</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/admin/orders</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-80af-b174-de5a24291aa2"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780afb174de5a24291aa2?pvs=21">주문 취소 (관리자)</a></td><td class="cell-miT\"><span class="selected-value select-value-color-purple">POST</span></td><td class="cell-&gt;x|D">/admin/orders/{orderId}/cancel</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-8004-9973-f24bba4f7866"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-green">Server</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e7780049973f24bba4f7866?pvs=21">주문 상태 변경 (배송 등)</a></td><td class="cell-miT\"><span class="selected-value select-value-color-default">PUT</span></td><td class="cell-&gt;x|D">/admin/orders/{orderId}/status</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr><tr id="29c59932-8e77-804f-9f24-f7fa8a95aa3b"><td class="cell-a:{O"></td><td class="cell-T\WK"><span class="selected-value select-value-color-orange">View</span></td><td class="cell-title"><a href="https://www.notion.so/29c599328e77804f9f24f7fa8a95aa3b?pvs=21">특정 주문 상세</a></td><td class="cell-miT\"><span class="selected-value select-value-color-brown">GET</span></td><td class="cell-&gt;x|D">/admin/orders/{orderId}</td><td class="cell-`_?v"><span class="selected-value select-value-color-blue">O</span></td><td class="cell-dq?}"></td><td class="cell-USYn"></td><td class="cell-OYFD"></td><td class="cell-Q`=^"></td></tr></tbody></table><br/><br/></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
