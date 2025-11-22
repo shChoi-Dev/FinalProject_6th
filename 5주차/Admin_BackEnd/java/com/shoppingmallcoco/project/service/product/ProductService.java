@@ -46,7 +46,8 @@ public class ProductService {
 
 		switch (sort) {
 		case "newest":
-			sortObj = Sort.by("regDate").descending();
+			// 최신순을 날짜가 아닌 ID 내림차순으로 변경
+			sortObj = Sort.by("prdNo").descending();
 			break;
 		case "priceAsc":
 			sortObj = Sort.by("prdPrice").ascending();
@@ -56,7 +57,7 @@ public class ProductService {
 			break;
 		case "popularity":
 		default:
-			sortObj = Sort.by("regDate").descending();
+			sortObj = Sort.by("prdNo").descending();
 			break;
 		}
 
